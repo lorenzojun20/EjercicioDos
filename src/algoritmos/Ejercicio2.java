@@ -106,69 +106,69 @@ public class Ejercicio2 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 390, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void cmdCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdCalcularActionPerformed
-        String montb,montotal;
-        int nhijos,op1=0;
-        double sb,op2=0;
-        if (txtNumHijos.getText().trim().isEmpty()){
-            JOptionPane.showMessageDialog(this, "Digite el Número de Hijos","ERROR",JOptionPane.ERROR_MESSAGE);
+        String montb, montotal;
+        int nhijos, op1 = 0;
+        double sb, op2 = 0;
+        if (txtNumHijos.getText().trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Digite el Número de Hijos", "ERROR", JOptionPane.ERROR_MESSAGE);
             txtNumHijos.requestFocusInWindow();
-        }else if(txtSueldoBase.getText().trim().isEmpty()){
-            JOptionPane.showMessageDialog(this, "Digite el Sueldo Base","ERROR",JOptionPane.ERROR_MESSAGE);
+        } else if (txtSueldoBase.getText().trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Digite el Sueldo Base", "ERROR", JOptionPane.ERROR_MESSAGE);
             txtSueldoBase.requestFocusInWindow();
-        }else{
-            nhijos=Integer.parseInt(txtNumHijos.getText());
-            sb=Double.parseDouble(txtSueldoBase.getText());
-            
-            op1=nhijos*80000;
-            op2=op1+sb;
-            
+        } else {
+            nhijos = Integer.parseInt(txtNumHijos.getText());
+            sb = Double.parseDouble(txtSueldoBase.getText());
+
+            op1 = nhijos * 80000;
+            op2 = op1 + sb;
+
         }
-       montb=String.valueOf(op1);
+        montb = String.valueOf(op1);
         txtMonBonif.setText(montb);
-        montotal=String.valueOf(op2);
+        montotal = String.valueOf(op2);
         txtMonTotal.setText(montotal);
-        
-        
+
+
     }//GEN-LAST:event_cmdCalcularActionPerformed
 
     private void txtNumHijosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNumHijosKeyTyped
-        char c=evt.getKeyChar(); 
-             
-         
-          if(!Character.isDigit(c)) { 
-              getToolkit().beep(); 
-               
-              evt.consume(); }
+        char c = evt.getKeyChar();
+
+        if (!Character.isDigit(c)) {
+            getToolkit().beep();
+
+            evt.consume();
+        }
     }//GEN-LAST:event_txtNumHijosKeyTyped
 
     private void txtSueldoBaseKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtSueldoBaseKeyTyped
-        char c=evt.getKeyChar(); 
-             
-         
-          if(!Character.isDigit(c)) { 
-              getToolkit().beep(); 
-               
-              evt.consume(); }
+        char c = evt.getKeyChar();
+
+        if (!Character.isDigit(c)) {
+            getToolkit().beep();
+
+            evt.consume();
+        }
     }//GEN-LAST:event_txtSueldoBaseKeyTyped
 
     private void cmdBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdBorrarActionPerformed
-  txtNumHijos.setText("");
-  txtSueldoBase.setText("");
-  txtMonBonif.setText("");
-  txtMonTotal.setText("");
-  
-  txtNumHijos.requestFocusInWindow();
+        txtNumHijos.setText("");
+        txtSueldoBase.setText("");
+        txtMonBonif.setText("");
+        txtMonTotal.setText("");
+
+        txtNumHijos.requestFocusInWindow();
     }//GEN-LAST:event_cmdBorrarActionPerformed
 
     /**
